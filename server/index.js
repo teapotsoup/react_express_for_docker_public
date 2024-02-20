@@ -1,11 +1,14 @@
 // server/index.js
 // 서버 수정본
 const express = require('express');
+const app = express();
+
 const cors = require('cors');
 const path = require('path')
 
-const app = express();
 const port = 3001;
+
+app.use(express.static('public'));
 
 // Express 애플리케이션에 "dist" 디렉토리의 정적 파일을 제공하는 미들웨어를 등록합니다.
 app.use(express.static(path.join(__dirname, "../dist")));
@@ -30,6 +33,13 @@ app.get('/app/profileData', (req, res) => {
 app.get('/app/specSheetData', (req, res) => {
     res.send(specSheetData);
 });
+
+const profileRouter = require("./router/profile");
+const specsheetRouter = require("./router/specsheet");
+
+
+app.use("/app/profileData", profileRouter);
+app.use("/app/specSheetData", specsheetRouter);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
