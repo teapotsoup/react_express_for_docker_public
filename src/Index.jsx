@@ -1,4 +1,3 @@
-// import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { HeaderCreator } from 'seed-ui';
 import { DepthMenuList } from './assets/DepthMenuList.jsx';
