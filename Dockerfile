@@ -1,26 +1,29 @@
 # Dockerfile
 
-# 리액트 애플리케이션 빌드를 위한 Node.js 이미지를 빌드 단계로 사용합니다.
+# Node.js  이미지를  기반으로 새로운  이미지를  만들고, 이 단계를 참조할  수 있는 별칭을 지정합니다.
 FROM node as builder
 
-# 이미지 작업 디렉토리를 설정합니다.
+# 작업 디렉토리를 /app으로 설정합니다.  이후의  명령어는  이 디렉토리에서 실행됩니다.
 WORKDIR /app
 
-# 리액트의 패키지 제이슨을 이미지 루트 폴더에 복사합니다.
+# .npmrc 파일을  현재 디렉토리(/app)로 복사합니다. 이 파일은 npm 설정을 포함할  수 있습니다.
 COPY .npmrc .
 
-# 리액트의 패키지 제이슨과 잠금 파일을 이미지 루트 폴더에 복사합니다.
+# package.json 파일을  현재 디렉토리(/app)로 복사합니다. 이 파일은 프로젝트의  의존성을  정의합니다.
 COPY package.json ./
 
-# npm 또는 yarn을 사용하여 종속성을 설치합니다.
+# package.json에  정의된  의존성을 설치합니다.
 RUN npm install
 
-# React 애플리케이션의   소스를 Docker   이미지   내에 번들링
-COPY  . .
+#  모든 파일과 디렉토리를  현재 디렉토리(/app)로 복사합니다.  이는 애플리케이션의  소스 코드를  이미지에 포함시킵니다.
+COPY . .
 
-# React 애플리케이션을 빌드
+# 애플리케이션을 빌드합니다.  이  명령어는 package.json에  정의된 build  스크립트를 실행합니다.
 RUN npm run build
 
+# Nginx 웹  서버를  기반으로 새로운  이미지를  만듭니다.
 FROM nginx
+
+# 첫 번째  단계에서 빌드된 결과물(/app/dist)을 Nginx의 웹 루트 디렉토리(/usr/share/nginx/html)로 복사합니다.  이를 통해 웹  서버가 애플리케이션을  서비스할  수 있게 됩니다.
 COPY --from=builder /app/dist /usr/share/nginx/html
 
