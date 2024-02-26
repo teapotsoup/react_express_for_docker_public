@@ -16,13 +16,11 @@ COPY package.json ./
 RUN npm install
 
 # React 애플리케이션의   소스를 Docker   이미지   내에 번들링
-COPY src ./src
+COPY  . .
 
 # React 애플리케이션을 빌드
 RUN npm run build
 
-EXPOSE  4000
-
-# 앱을 실행하는  명령을  정의
-CMD [ "npm", "start" ]
+FROM nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
 

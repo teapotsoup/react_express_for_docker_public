@@ -7,7 +7,7 @@ import {DepthMenuList} from "./assets/DepthMenuList.jsx";
 function App() {
 
     return (
-        <Router basename="/JOJI">
+        <Router basename="/">
             <Routes>
                 <Route path="/" element={<Index />}>
                     {SetRoute(DepthMenuList, 1)}
