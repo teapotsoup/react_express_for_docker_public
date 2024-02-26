@@ -722,6 +722,38 @@ acorn-jsx@^5.3.2:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.11.3.tgz"
   integrity sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==
 
+ag-charts-community@^9.1.1, ag-charts-community@9.1.1:
+  version "9.1.1"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/ag-charts-community/-/ag-charts-community-9.1.1.tgz"
+  integrity sha512-IRt6qx9ZpPLME+w3fyWNUqNMGBe9nbcOC5VSHcwkfFdtlyyVa7/b/kkLPfdcXtY+6vhPMSdqOmlod1oANYCU2A==
+
+ag-charts-react@^9.1.1:
+  version "9.1.1"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/ag-charts-react/-/ag-charts-react-9.1.1.tgz"
+  integrity sha512-5fKWvP9zAkV5M3g0E6yNj4KWWSsKMjVs7lPFAxZU5OOF0pgCAfAmGbSqt46fMKzNpHnJBy0W3dyrn3dg3e5pog==
+  dependencies:
+    prop-types "^15.6.2"
+
+ag-grid-community@31.1.1:
+  version "31.1.1"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/ag-grid-community/-/ag-grid-community-31.1.1.tgz"
+  integrity sha512-tiQZ7VQ07yJScTMIQpaYoUMPgiyXMwYDcwTxe4riRrcYGTg0e258XEihoPUZFejR60P1fYWMxdJaR2JUnyhGrg==
+
+ag-grid-enterprise@^31.1.1:
+  version "31.1.1"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/ag-grid-enterprise/-/ag-grid-enterprise-31.1.1.tgz"
+  integrity sha512-hAy8x+P2KzpRb8RONvCj/FqLL0AJ4FEIEJsEuOEiZAEgi64TAhZv/FzIhIbAElPXf+OhCMKHIAKTD765vzCMOQ==
+  dependencies:
+    ag-grid-community "31.1.1"
+
+ag-grid-react@^31.1.1:
+  version "31.1.1"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/ag-grid-react/-/ag-grid-react-31.1.1.tgz"
+  integrity sha512-aaDMSP8MGhoXL5M9c4UmhBClRlc3mEMMC0E0/1mhXU6bdiz0QxXT/xQtDe3DFC62VrtXVda9x20Lpj6p6Bfy8g==
+  dependencies:
+    ag-grid-community "31.1.1"
+    prop-types "^15.8.1"
+
 ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz"
@@ -1773,6 +1805,11 @@ globalthis@^1.0.3:
   dependencies:
     define-properties "^1.1.3"
 
+gojs@^2.3.14:
+  version "2.3.14"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/gojs/-/gojs-2.3.14.tgz"
+  integrity sha512-aCDuFz4Igo3lOaBHvo86l//uWttT2yGP2z1CIxcbnYdC/9Uy4/la6tlaflvsoQ3iQVHzPWI7a//3ZHDBn6fKaA==
+
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz"
@@ -2159,6 +2196,11 @@ iterator.prototype@^1.1.2:
     has-symbols "^1.0.3"
     reflect.getprototypeof "^1.0.4"
     set-function-name "^2.0.1"
+
+js-cookie@^3.0.5:
+  version "3.0.5"
+  resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/js-cookie/-/js-cookie-3.0.5.tgz"
+  integrity sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -2593,7 +2635,7 @@ prismjs@~1.27.0:
   resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/prismjs/-/prismjs-1.27.0.tgz"
   integrity sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2654,7 +2696,7 @@ react-code-blocks@^0.1.5:
     styled-components "^6.1.0"
     tslib "^2.6.0"
 
-react-dom@^18.2.0, "react-dom@>= 16.8.0", react-dom@>=16.8, react-dom@>=16.8.0:
+"react-dom@^16.3.0 || ^17.0.0 || ^18.0.0", react-dom@^18.2.0, "react-dom@>= 16.8.0", react-dom@>=16.8, react-dom@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2708,7 +2750,7 @@ react-syntax-highlighter@^15.5.0:
     prismjs "^1.27.0"
     refractor "^3.6.0"
 
-react@*, "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, "react@>= 0.14.0", "react@>= 16.8.0", react@>=16, react@>=16.8, react@>=16.8.0:
+react@*, "react@^16.3.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, "react@>= 0.14.0", "react@>= 16.8.0", react@>=16, react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -3380,7 +3422,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zustand@^4.1.3:
+zustand@^4.1.3, zustand@^4.5.1:
   version "4.5.1"
   resolved "https://r2ware-rd.synology.me:8082/repository/npm_group/zustand/-/zustand-4.5.1.tgz"
   integrity sha512-XlauQmH64xXSC1qGYNv00ODaQ3B+tNPoy22jv2diYiP4eoDKr9LA+Bh5Bc3gplTrFdb6JVI+N4kc1DZ/tbtfPg==
