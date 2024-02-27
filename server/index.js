@@ -17,10 +17,13 @@ app.use(cors());
 
 const profileRouter = require("./router/profile");
 const specSheetRouter = require("./router/specsheet");
+const diagramRouter = require("./router/diagram");
+
 
 
 app.use("/app/profileData", profileRouter);
 app.use("/app/specSheetData", specSheetRouter);
+app.use("/app/diagramData", diagramRouter);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

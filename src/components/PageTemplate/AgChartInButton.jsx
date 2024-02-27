@@ -4,13 +4,12 @@ import { WhiteButton } from 'seed-ui';
 import styled from '@emotion/styled';
 
 import { MdExpand, MdOutlineShowChart, MdOutlineBarChart } from 'react-icons/md';
-import { FaToggleOff, FaToggleOn } from 'react-icons/Fa';
+import { FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import AgChartZoom from "../AgGridAddOn/AgChartZoom.jsx";
 import {useContextMenuStore} from "../AgGridAddOn/state/useAgChart.js";
 import AgContextMenu from "../AgGridAddOn/AgContextMenu.jsx";
 
 /**
- *
  * @param chart
  * - option : 차트 옵션, 기본 AG 차트의 옵션 셋팅과 동일함.
  * - config : 차트 옵션 외 설정할 부분 셋팅.
@@ -39,7 +38,6 @@ const defaultChartOption = {
     },
   },
 };
-
 
 const AgChartInButton = forwardRef(({ options, data }, ref) => {
   const [chartOption, setChartOption] = useState({ ...defaultChartOption, ...options });
