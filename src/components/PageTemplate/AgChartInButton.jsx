@@ -2,9 +2,7 @@ import  { useEffect, forwardRef, useState } from 'react';
 import { AgChartsReact } from 'ag-charts-react';
 import { WhiteButton } from 'seed-ui';
 import styled from '@emotion/styled';
-// import AgChartZoom from 'components/AgGridAddOn/AgChartZoom';
-// import { useContextMenuStore } from 'components/AgGridAddOn/state/useAgChart';
-// import AgContextMenu from 'components/AgGridAddOn/AgContextMenu';
+
 import { MdExpand, MdOutlineShowChart, MdOutlineBarChart } from 'react-icons/md';
 import { FaToggleOff, FaToggleOn } from 'react-icons/Fa';
 import AgChartZoom from "../AgGridAddOn/AgChartZoom.jsx";
@@ -21,10 +19,6 @@ import AgContextMenu from "../AgGridAddOn/AgContextMenu.jsx";
  * @returns {JSX.Element}
  * @constructor
  */
-
-export const defaultTooltip = {
-  renderer: ({ title, xValue, yValue }) => ({ title: `${xValue}회차 ${title}`, content: yValue }),
-};
 
 const defaultChartOption = {
   theme: {
