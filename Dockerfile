@@ -24,6 +24,8 @@ RUN npm run build
 # Nginx 웹  서버를  기반으로 새로운  이미지를  만듭니다.
 FROM nginx
 
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # 첫 번째  단계에서 빌드된 결과물(/app/dist)을 Nginx의 웹 루트 디렉토리(/usr/share/nginx/html)로 복사합니다.  이를 통해 웹  서버가 애플리케이션을  서비스할  수 있게 됩니다.
 COPY --from=builder /app/dist /usr/share/nginx/html
 
